@@ -64,17 +64,13 @@ export CXX=g++
 %install
 %make_install -C build
 
-#fix .desktop file
-#desktop-file-edit \
-#	--remove-category=Network \
-#		%{buildroot}%{_datadir}/applications/drawpile.desktop
 
 %files
 %doc %{_docdir}/%{name}/
 %{_bindir}/drawpile*
 %{_datadir}/drawpile/
-%{_datadir}/appdata/drawpile.appdata.xml
-%{_datadir}/applications/drawpile.desktop
+%{_datadir}/metainfo/net.drawpile.drawpile.appdata.xml
+%{_datadir}/applications/net.drawpile.drawpile.desktop
 %{_datadir}/mime/packages/x-drawpile.xml
 %{_iconsdir}/hicolor/*/apps/drawpile*
 %{_iconsdir}/hicolor/*/mimetypes/*
