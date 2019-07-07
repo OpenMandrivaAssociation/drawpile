@@ -13,6 +13,7 @@ BuildRequires:  desktop-file-utils
 BuildRequires:  xdg-utils
 BuildRequires:  cmake(KF5Archive)
 BuildRequires:  cmake(KF5DNSSD)
+BuildRequires:	qt5-qttools
 BuildRequires:  pkgconfig(Qt5Network)
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Gui)
@@ -24,9 +25,12 @@ BuildRequires:  pkgconfig(Qt5Xml)
 BuildRequires:  pkgconfig(Qt5Widgets)
 BuildRequires:  pkgconfig(libmicrohttpd)
 BuildRequires:  pkgconfig(libpng)
+BuildRequires:	pkgconfig(libsodium)
 BuildRequires:  pkgconfig(systemd)
 BuildRequires:  giflib-devel
 BuildRequires:  miniupnpc-devel
+#Optional
+BuildRequires:	pkgconfig(vpx)
 
 %description
 Drawpile is a drawing program that lets you share the canvas with other users in real time.
