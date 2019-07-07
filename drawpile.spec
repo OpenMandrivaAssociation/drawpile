@@ -1,3 +1,5 @@
+%define _disable_lto 1
+
 Name:           drawpile
 Version:        2.1.11
 Release:        1
@@ -54,6 +56,8 @@ Some feature highlights:
 %autopatch -p1
 
 %build
+export CC=gcc
+export CXX=g++
 %cmake
 %make_build
 
