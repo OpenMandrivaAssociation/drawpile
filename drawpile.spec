@@ -1,4 +1,5 @@
 %define _disable_lto 1
+%define oname Drawpile
 
 Name:           drawpile
 Version:        2.1.11
@@ -7,7 +8,7 @@ Summary:        A collaborative drawing program
 Group:          Graphics/Editors and Converters
 License:        GPLv3+
 URL:            https://drawpile.net/
-Source:         https://github.com/drawpile/Drawpile/archive/%{version}/Drawpile-%{version}.tar.gz
+Source:         https://github.com/drawpile/Drawpile/archive/%{version}/%{oname}-%{version}.tar.gz
 
 BuildRequires:  cmake
 BuildRequires:	cmake(ECM)
@@ -53,7 +54,7 @@ Some feature highlights:
 
 
 %prep
-%setup -qn Drawpile-%{version}
+%setup -qn %{oname}-%{version}
 %autopatch -p1
 
 %build
