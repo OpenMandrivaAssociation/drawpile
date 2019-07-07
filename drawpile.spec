@@ -1,3 +1,5 @@
+%define _disable_lto 1
+
 Name:           drawpile
 Version:        2.1.11
 Release:        1
@@ -8,10 +10,12 @@ URL:            https://drawpile.net/
 Source:         https://github.com/drawpile/Drawpile/archive/%{version}/Drawpile-%{version}.tar.gz
 
 BuildRequires:  cmake
+BuildRequires:	cmake(ECM)
 BuildRequires:  desktop-file-utils
 BuildRequires:  xdg-utils
 BuildRequires:  cmake(KF5Archive)
 BuildRequires:  cmake(KF5DNSSD)
+BuildRequires:	qt5-qttools
 BuildRequires:  pkgconfig(Qt5Network)
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Gui)
@@ -23,7 +27,11 @@ BuildRequires:  pkgconfig(Qt5Xml)
 BuildRequires:  pkgconfig(Qt5Widgets)
 BuildRequires:  pkgconfig(libmicrohttpd)
 BuildRequires:  pkgconfig(libpng)
+BuildRequires:	pkgconfig(libsodium)
 BuildRequires:  pkgconfig(systemd)
+BuildRequires:  miniupnpc-devel
+#Optional
+BuildRequires:	pkgconfig(vpx)
 BuildRequires:  giflib-devel
 BuildRequires:  miniupnpc-devel
 
@@ -49,23 +57,21 @@ Some feature highlights:
 %autopatch -p1
 
 %build
-%cmake_qt5
+export CC=gcc
+export CXX=g++
+%cmake
 %make_build
 
 %install
 %make_install -C build
 
-#fix .desktop file
-desktop-file-edit \
-	--remove-category=Network \
-		%{buildroot}%{_datadir}/applications/drawpile.desktop
 
 %files
 %doc %{_docdir}/%{name}/
 %{_bindir}/drawpile*
 %{_datadir}/drawpile/
-%{_datadir}/appdata/drawpile.appdata.xml
-%{_datadir}/applications/drawpile.desktop
+%{_datadir}/metainfo/net.drawpile.drawpile.appdata.xml
+%{_datadir}/applications/net.drawpile.drawpile.desktop
 %{_datadir}/mime/packages/x-drawpile.xml
 %{_iconsdir}/hicolor/*/apps/drawpile*
 %{_iconsdir}/hicolor/*/mimetypes/*
