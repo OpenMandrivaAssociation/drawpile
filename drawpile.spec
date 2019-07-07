@@ -45,7 +45,7 @@ Some feature highlights:
 
 
 %prep
-%setup -q
+%setup -qn Drawpile-%{version}
 %autopatch -p1
 
 %build
