@@ -29,10 +29,11 @@ BuildRequires:  pkgconfig(libmicrohttpd)
 BuildRequires:  pkgconfig(libpng)
 BuildRequires:	pkgconfig(libsodium)
 BuildRequires:  pkgconfig(systemd)
-BuildRequires:  giflib-devel
 BuildRequires:  miniupnpc-devel
 #Optional
 BuildRequires:	pkgconfig(vpx)
+BuildRequires:  giflib-devel
+BuildRequires:  miniupnpc-devel
 
 %description
 Drawpile is a drawing program that lets you share the canvas with other users in real time.
