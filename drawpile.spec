@@ -8,6 +8,7 @@ URL:            https://drawpile.net/
 Source:         https://github.com/drawpile/Drawpile/archive/%{version}/Drawpile-%{version}.tar.gz
 
 BuildRequires:  cmake
+BuildRequires:	cmake(ECM)
 BuildRequires:  desktop-file-utils
 BuildRequires:  xdg-utils
 BuildRequires:  cmake(KF5Archive)
