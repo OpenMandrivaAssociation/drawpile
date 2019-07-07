@@ -49,7 +49,7 @@ Some feature highlights:
 %autopatch -p1
 
 %build
-%cmake_qt5
+%cmake
 %make_build
 
 %install
