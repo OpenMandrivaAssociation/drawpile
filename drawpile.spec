@@ -65,9 +65,9 @@ export CXX=g++
 %make_install -C build
 
 #fix .desktop file
-desktop-file-edit \
-	--remove-category=Network \
-		%{buildroot}%{_datadir}/applications/drawpile.desktop
+#desktop-file-edit \
+#	--remove-category=Network \
+#		%{buildroot}%{_datadir}/applications/drawpile.desktop
 
 %files
 %doc %{_docdir}/%{name}/
