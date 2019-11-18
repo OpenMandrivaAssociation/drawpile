@@ -2,7 +2,7 @@
 %define oname Drawpile
 
 Name:           drawpile
-Version:        2.1.12
+Version:        2.1.13
 Release:        1
 Summary:        A collaborative drawing program
 Group:          Graphics/Editors and Converters
