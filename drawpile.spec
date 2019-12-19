@@ -51,21 +51,19 @@ Some feature highlights:
     Supports OpenRaster file format
     Encrypted connections using SSL
     Automatic port forwarding with UPnP
-
-
+    
 %prep
 %setup -qn %{oname}-%{version}
 %autopatch -p1
 
 %build
-#export CC=gcc
-#export CXX=g++
+export CC=gcc
+export CXX=g++
 %cmake
 %make_build
 
 %install
 %make_install -C build
-
 
 %files
 %doc %{_docdir}/%{name}/
