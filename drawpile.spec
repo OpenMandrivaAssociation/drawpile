@@ -2,7 +2,7 @@
 %define oname Drawpile
 
 Name:           drawpile
-Version:        2.1.14
+Version:        2.1.15
 Release:        1
 Summary:        A collaborative drawing program
 Group:          Graphics/Editors and Converters
@@ -51,8 +51,7 @@ Some feature highlights:
     Supports OpenRaster file format
     Encrypted connections using SSL
     Automatic port forwarding with UPnP
-
-
+    
 %prep
 %setup -qn %{oname}-%{version}
 %autopatch -p1
@@ -65,7 +64,6 @@ export CXX=g++
 
 %install
 %make_install -C build
-
 
 %files
 %doc %{_docdir}/%{name}/
