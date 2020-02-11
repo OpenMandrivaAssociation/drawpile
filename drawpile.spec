@@ -3,12 +3,13 @@
 
 Name:           drawpile
 Version:        2.1.16
-Release:        1
+Release:        2
 Summary:        A collaborative drawing program
 Group:          Graphics/Editors and Converters
 License:        GPLv3+
 URL:            https://drawpile.net/
 Source:         https://github.com/drawpile/Drawpile/archive/%{version}/%{oname}-%{version}.tar.gz
+Patch0:         drawpile-2.1.16-fix-clang-build-openmandriva.patch
 
 BuildRequires:  cmake
 BuildRequires:	cmake(ECM)
@@ -54,11 +55,11 @@ Some feature highlights:
     
 %prep
 %setup -qn %{oname}-%{version}
-%autopatch -p1
+%autopatch -p0
 
 %build
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 %cmake
 %make_build
 
