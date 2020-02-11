@@ -57,8 +57,8 @@ Some feature highlights:
 %autopatch -p1
 
 %build
-#export CC=gcc
-#export CXX=g++
+export CC=gcc
+export CXX=g++
 %cmake
 %make_build
 
