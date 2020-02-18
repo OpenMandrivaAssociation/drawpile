@@ -9,7 +9,6 @@ Group:          Graphics/Editors and Converters
 License:        GPLv3+
 URL:            https://drawpile.net/
 Source:         https://github.com/drawpile/Drawpile/archive/%{version}/%{oname}-%{version}.tar.gz
-#Patch0:         drawpile-2.1.16-fix-clang-build-openmandriva.patch
 
 BuildRequires:  cmake
 BuildRequires:	cmake(ECM)
