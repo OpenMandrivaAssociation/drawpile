@@ -2,14 +2,13 @@
 %define oname Drawpile
 
 Name:           drawpile
-Version:        2.1.16
-Release:        2
+Version:        2.1.17
+Release:        1
 Summary:        A collaborative drawing program
 Group:          Graphics/Editors and Converters
 License:        GPLv3+
 URL:            https://drawpile.net/
 Source:         https://github.com/drawpile/Drawpile/archive/%{version}/%{oname}-%{version}.tar.gz
-Patch0:         drawpile-2.1.16-fix-clang-build-openmandriva.patch
 
 BuildRequires:  cmake
 BuildRequires:	cmake(ECM)
