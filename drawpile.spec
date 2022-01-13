@@ -3,7 +3,7 @@
 
 Name:           drawpile
 Version:        2.1.20
-Release:        2
+Release:        3
 Summary:        A collaborative drawing program
 Group:          Graphics/Editors and Converters
 License:        GPLv3+
