@@ -12,6 +12,7 @@ Source:         https://github.com/drawpile/Drawpile/archive/%{version}/%{oname}
 
 BuildRequires:  cmake
 BuildRequires:	cmake(ECM)
+BuildRequires:  cargo
 BuildRequires:  rust
 BuildRequires:  desktop-file-utils
 BuildRequires:  xdg-utils
