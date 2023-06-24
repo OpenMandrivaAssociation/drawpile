@@ -31,6 +31,7 @@ BuildRequires:  pkgconfig(Qt5Widgets)
 BuildRequires:  pkgconfig(libmicrohttpd)
 BuildRequires:  pkgconfig(libpng)
 BuildRequires:	pkgconfig(libsodium)
+BuildRequires:  pkgconfig(libmypaint)
 BuildRequires:  pkgconfig(systemd)
 BuildRequires:  miniupnpc-devel
 #Optional
