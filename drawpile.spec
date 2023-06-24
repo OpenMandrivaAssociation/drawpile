@@ -55,7 +55,7 @@ Some feature highlights:
     Automatic port forwarding with UPnP
     
 %prep
-%setup -qn %{oname}-%{version}-beta.3
+%setup -qn %{oname}-%{version}-beta.5
 %autopatch -p0
 
 %build
