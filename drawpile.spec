@@ -8,7 +8,7 @@ Summary:        A collaborative drawing program
 Group:          Graphics/Editors and Converters
 License:        GPLv3+
 URL:            https://drawpile.net/
-Source:         https://github.com/drawpile/Drawpile/archive/%{version}/%{oname}-%{version}-beta.3.tar.gz
+Source:         https://github.com/drawpile/Drawpile/archive/%{version}/%{oname}-%{version}-beta.5.tar.gz
 
 BuildRequires:  cmake
 BuildRequires:	cmake(ECM)
