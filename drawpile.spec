@@ -3,12 +3,12 @@
 
 Name:           drawpile
 Version:        2.2.0
-Release:        0.beta.5.1
+Release:        0.beta.6.1
 Summary:        A collaborative drawing program
 Group:          Graphics/Editors and Converters
 License:        GPLv3+
 URL:            https://drawpile.net/
-Source:         https://github.com/drawpile/Drawpile/archive/%{version}/%{oname}-%{version}-beta.5.tar.gz
+Source:         https://github.com/drawpile/Drawpile/archive/%{version}/%{oname}-%{version}-beta.6.tar.gz
 
 BuildRequires:  cmake
 BuildRequires:	cmake(ECM)
@@ -56,7 +56,7 @@ Some feature highlights:
     Automatic port forwarding with UPnP
     
 %prep
-%setup -qn %{oname}-%{version}-beta.5
+%setup -qn %{oname}-%{version}-beta.6
 %autopatch -p0
 
 %build
