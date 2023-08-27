@@ -74,7 +74,7 @@ Some feature highlights:
 %{_datadir}/drawpile/
 %{_datadir}/metainfo/net.drawpile.drawpile.appdata.xml
 %{_datadir}/applications/net.drawpile.drawpile.desktop
-#{_datadir}/mime/packages/x-drawpile.xml
+%{_datadir}/mime/application/vnd.drawpile.recording.xml
+%{_datadir}/mime/text/vnd.drawpile.recording.xml
 %{_iconsdir}/hicolor/*/apps/drawpile*
 %{_iconsdir}/hicolor/*/mimetypes/*
-#{_mandir}/man1/drawpile*
