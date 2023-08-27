@@ -62,7 +62,7 @@ Some feature highlights:
 %build
 #export CC=gcc
 #export CXX=g++
-%cmake
+%cmake -DCMAKE_POSITION_INDEPENDENT_CODE=ON
 %make_build
 
 %install
