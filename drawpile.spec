@@ -69,12 +69,12 @@ Some feature highlights:
 %make_install -C build
 
 %files
-%doc %{_docdir}/%{name}/
+#doc %{_docdir}/%{name}/
 %{_bindir}/drawpile*
 %{_datadir}/drawpile/
 %{_datadir}/metainfo/net.drawpile.drawpile.appdata.xml
 %{_datadir}/applications/net.drawpile.drawpile.desktop
-%{_datadir}/mime/packages/x-drawpile.xml
+#{_datadir}/mime/packages/x-drawpile.xml
 %{_iconsdir}/hicolor/*/apps/drawpile*
 %{_iconsdir}/hicolor/*/mimetypes/*
-%{_mandir}/man1/drawpile*
+#{_mandir}/man1/drawpile*
