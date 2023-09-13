@@ -9,9 +9,11 @@ Group:          Graphics/Editors and Converters
 License:        GPLv3+
 URL:            https://drawpile.net/
 Source:         https://github.com/drawpile/Drawpile/archive/%{version}/%{oname}-%{version}-beta.7.tar.gz
+Patch0:		drawpile-2.2-static-helpers.patch
 
 BuildRequires:  cmake
 BuildRequires:	cmake(ECM)
+BuildRequires:	ninja
 BuildRequires:  cargo
 BuildRequires:  rust
 BuildRequires:  desktop-file-utils
@@ -56,17 +58,15 @@ Some feature highlights:
     Automatic port forwarding with UPnP
     
 %prep
-%setup -qn %{oname}-%{version}-beta.7
-%autopatch -p0
+%autosetup -p1 -n %{oname}-%{version}-beta.7
+%cmake \
+	-G Ninja
 
 %build
-#export CC=gcc
-#export CXX=g++
-%cmake -DCMAKE_POSITION_INDEPENDENT_CODE=ON
-%make_build
+%ninja_build -C build
 
 %install
-%make_install -C build
+%ninja_install -C build
 
 %files
 #doc %{_docdir}/%{name}/

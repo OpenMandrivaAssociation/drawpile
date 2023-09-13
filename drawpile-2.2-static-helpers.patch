@@ -1,0 +1,33 @@
+diff -up Drawpile-2.2.0-beta.7/cmake/DrawdanceHelpers.cmake.omv~ Drawpile-2.2.0-beta.7/cmake/DrawdanceHelpers.cmake
+--- Drawpile-2.2.0-beta.7/cmake/DrawdanceHelpers.cmake.omv~	2023-09-13 14:02:33.547925489 +0200
++++ Drawpile-2.2.0-beta.7/cmake/DrawdanceHelpers.cmake	2023-09-13 14:02:45.254804463 +0200
+@@ -5,7 +5,7 @@ function(dp_add_executable target)
+ endfunction()
+ 
+ function(dp_add_library target)
+-    add_library(${target})
++    add_library(${target} STATIC)
+     add_library(${PROJECT_NAME}::${target} ALIAS ${target})
+     set_property(GLOBAL APPEND PROPERTY dp_components "${target}")
+ endfunction()
+diff -up Drawpile-2.2.0-beta.7/src/drawdance/libcommon/CMakeLists.txt.omv~ Drawpile-2.2.0-beta.7/src/drawdance/libcommon/CMakeLists.txt
+diff -up Drawpile-2.2.0-beta.7/src/libclient/CMakeLists.txt.omv~ Drawpile-2.2.0-beta.7/src/libclient/CMakeLists.txt
+--- Drawpile-2.2.0-beta.7/src/libclient/CMakeLists.txt.omv~	2023-09-13 14:01:28.927556775 +0200
++++ Drawpile-2.2.0-beta.7/src/libclient/CMakeLists.txt	2023-09-13 14:01:40.101236284 +0200
+@@ -1,6 +1,6 @@
+ find_package(${QT_PACKAGE_NAME} REQUIRED COMPONENTS Gui Sql)
+ 
+-add_library(dpclient)
++add_library(dpclient STATIC)
+ 
+ target_sources(dpclient PRIVATE
+ 	document.cpp
+diff -up Drawpile-2.2.0-beta.7/src/libshared/CMakeLists.txt.omv~ Drawpile-2.2.0-beta.7/src/libshared/CMakeLists.txt
+--- Drawpile-2.2.0-beta.7/src/libshared/CMakeLists.txt.omv~	2023-09-13 14:10:50.914210779 +0200
++++ Drawpile-2.2.0-beta.7/src/libshared/CMakeLists.txt	2023-09-13 14:10:55.114288329 +0200
+@@ -1,4 +1,4 @@
+-add_library(dpshared)
++add_library(dpshared STATIC)
+ 
+ target_sources(dpshared PRIVATE
+ 	listings/announcementapi.cpp
