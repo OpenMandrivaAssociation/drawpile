@@ -9,7 +9,7 @@ Group:          Graphics/Editors and Converters
 License:        GPLv3+
 URL:            https://drawpile.net/
 Source:         https://github.com/drawpile/Drawpile/archive/%{version}/%{oname}-%{version}-beta.11.tar.gz
-Patch0:		drawpile-2.2-static-helpers.patch
+#Patch0:		drawpile-2.2-static-helpers.patch
 
 BuildRequires:  cmake
 BuildRequires:	cmake(ECM)
