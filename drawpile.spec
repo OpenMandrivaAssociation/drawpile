@@ -3,12 +3,12 @@
 
 Name:           drawpile
 Version:        2.2.0
-Release:        0.beta.11.1
+Release:        1
 Summary:        A collaborative drawing program
 Group:          Graphics/Editors and Converters
 License:        GPLv3+
 URL:            https://drawpile.net/
-Source0:         https://github.com/drawpile/Drawpile/archive/%{version}/%{oname}-%{version}-beta.11.tar.gz
+Source0:         https://github.com/drawpile/Drawpile/archive/%{version}/%{oname}-%{version}.tar.gz
 Source1:        vendor.tar.xz
 Source2:        cargo_config
 #Patch0:		drawpile-2.2-static-helpers.patch
@@ -60,7 +60,7 @@ Some feature highlights:
     Automatic port forwarding with UPnP
     
 %prep
-%autosetup -n %{oname}-%{version}-beta.11 -a1 -p1
+%autosetup -n %{oname}-%{version} -a1 -p1
 mkdir .cargo
 cp %{SOURCE2} .cargo/config
 %cmake \
